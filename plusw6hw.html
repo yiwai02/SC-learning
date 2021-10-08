@@ -1,12 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/9b5c6085e0.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="C:\Users\yukai\.vscode\ME\Plus\plusw2hwref\plusw6hw.css" />
+
+    <title>Hamster weather report</title>
 </head>
+
 <body>
-    
+    <div class="container">
+        <h1>
+            🐹Hamstapedia Weather Report🐹
+        </h1>
+
+        <div class="row">
+            <div class="col-2">
+                <img src="C:\Users\yukai\.vscode\ME\Plus\plusw2hwfile\Sun.png" alt="weatherpic" class="weathertoday">
+            </div>
+            <div class="col-3">
+                <h2>
+                    <div class="currentCity" id="currentCity">
+                        New York City
+                    </div>
+                    <br />
+                    <div class="currentDate" id="currentDate">
+                        Tuesday 16:00
+                    </div>
+                    <br />
+                    <span id=currentTemp>
+                        25
+                    </span>
+                    <span class=celsius id=celsius>
+                        °C
+                    </span>
+                    |
+                    <span class=fahrenheit id=fahrenheit>
+                        °F
+                    </span>
+                    <br />
+                    <span class=weatherNow>
+                        Sunny
+                    </span>
+                    <br />
+                </h2>
+                <img src="C:\Users\yukai\.vscode\ME\Plus\plusw2hwfile\hamrain.jpg" alt="hamsterpic"
+                    class="hamsterweather">
+            </div>
+            <div class="col-7">
+                <div class="card" style="width: 21rem; float: right;">
+                    <div class="card-body">
+                        <h5 class="search-city">
+                            <form id="search-city-form">
+                                <input type="form" placeholder="search city" autocomplete="off" id="search-box" />
+                                <input type="submit" value="Go" class="btn btn-warning">
+                            </form>
+                            <input type="button" value="Search your location" class="btn btn-primary"
+                                id="search-current-location"></button>
+                        </h5>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <div class="flex-shrink-0">
+                                        <span class="sunny">
+                                            <i class="fas fa-sun"></i>
+                                        </span>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        Tomorrow
+                                        <br />
+                                        20°C Sunny
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <div class="flex-shrink-0">
+                                        <span class="cloudy">
+                                            <i class="fas fa-cloud"></i>
+                                        </span>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        Wednesday
+                                        <br />
+                                        16°C Cloudy
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <div class="flex-shrink-0">
+                                        <span class="cloudy">
+                                            <i class="fas fa-cloud-sun"></i>
+                                        </span>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        Thursday
+                                        <br />
+                                        17°C Partly cloudy
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <div class="flex-shrink-0">
+                                        <span class="rainy">
+                                            <i class="fas fa-cloud-showers-heavy"></i>
+                                        </span>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        Friday
+                                        <br />
+                                        15°C Showers
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <div class="flex-shrink-0">
+                                        <span class="rainy">
+                                            <i class="fas fa-cloud-sun-rain"></i>
+                                        </span>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        Saturday
+                                        <br />
+                                        19°C Partly rainy
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+            </div>
+        </div>
+        <span class="author">
+            Powered by Yuka Iwai(☞ﾟヮﾟ)☞
+        </span>
+    </div>
+
+    <script src="C:\Users\yukai\.vscode\ME\Plus\plusw6hw.js">
+    </script>
+
 </body>
+
 </html>

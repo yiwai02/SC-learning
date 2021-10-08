@@ -1,0 +1,99 @@
+body {
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  font-family: "Kalam", cursive;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+h1 {
+  color: #de703c;
+  text-align: center;
+  margin: 25px 0px 0px;
+  font-family: "Fredoka One", cursive;
+}
+
+h2 {
+  margin: 0;
+  color: #83580b;
+  font-weight: 900;
+  line-height: 25px;
+}
+
+input[type="text"] {
+  text-align: center;
+}
+
+.currentCity {
+  text-transform: capitalize;
+}
+
+.weathertoday {
+  width: 220px;
+  display: block;
+}
+
+.row .col-2 {
+  position: relative;
+  top: 20px;
+  left: -10px;
+}
+
+.currentDate {
+  font-size: 20px;
+}
+
+.celsius {
+  color: #41464b;
+  cursor: pointer;
+}
+
+.fahrenheit {
+  color: #41464b;
+  cursor: pointer;
+}
+
+.weatherNow {
+  line-height: 55px;
+  color: #e5b817e0;
+  text-transform: capitalize;
+}
+
+.row .col-3 {
+  padding: 50px 0px;
+  position: relative;
+  top: 20px;
+  left: 40px;
+  color: #da5151;
+  font-size: 20px;
+}
+
+.card {
+  position: relative;
+  top: 150px;
+  right: 60px;
+}
+
+.sunny {
+  color: #ff6f3c;
+}
+
+.cloudy {
+  color: #757a79;
+}
+
+.rainy {
+  color: #2772db;
+}
+
+.hamsterweather {
+  width: 400px;
+  display: block;
+  border-radius: 6px;
+  margin: 45px 0px;
+}
+
+.author {
+  color: #2eb872;
+  font-size: 12px;
+  float: right;
+}
